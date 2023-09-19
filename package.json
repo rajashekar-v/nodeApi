@@ -4,7 +4,8 @@
   "description": "Node API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "server": "nodemon server.js"
   },
   "keywords": [
     "nodejs",
@@ -13,5 +14,13 @@
     "mysql"
   ],
   "author": "rajashekar.vistharakula",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mariadb": "^3.2.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.0.1",
+    "sequelize": "^6.33.0"
+  }
 }
