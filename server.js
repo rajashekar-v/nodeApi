@@ -9,6 +9,7 @@ var corOptions = {
     origin:'http://localhost:9000'
 }
 
+
 //Middleware
 
 app.use(cors(corOptions));
@@ -16,6 +17,11 @@ app.use(cors(corOptions));
 app.use(express.json());
 
 app.use(express.urlencoded({extended : true}));
+
+//Routers
+
+const Productrouter = require("./route/productRouter");
+app.use("/api/product",Productrouter);
 
 //Test API
 

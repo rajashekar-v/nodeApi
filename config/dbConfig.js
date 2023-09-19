@@ -1,10 +1,10 @@
 
 module.exports = {
-    host: process.env.MYSQL_HOST,
-    user: process.env.MYSQL_USERNAME,
-    password: process.env.MYSQL_PASSWORD,
-    database:process.env.MYSQL_DATABASE,
-    dialect:'mariadb',
+    host:"localhost",
+    user: "root",
+    password:"",
+    database:"nodeapi",
+    dialect:"mariadb",
     pool:{
         max:5,
         min:0,

@@ -27,3 +27,19 @@ sequelize.authenticate()
 }).catch((error)=>{
     console.error('Unable to connect to the database: ', error); 
 });
+
+const db = {}
+
+db.Sequelize = Sequelize;
+db.sequelize = sequelize;
+
+db.products = require("./productModel")(sequelize, DataTypes);
+db.reviews = require("./reviewModel")(sequelize, DataTypes);
+
+db.sequelize.sync({
+    force:false
+}).then(()=>{
+    console.log('yes re-sync done');
+});
+
+module.exports = db;
